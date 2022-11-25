@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'pokedex',
+    modulePrefix: 'emberdex',
     environment,
     rootURL: '/',
     locationType: 'history',

@@ -1,5 +1,5 @@
-import Application from 'pokedex/app';
-import config from 'pokedex/config/environment';
+import Application from 'emberdex/app';
+import config from 'emberdex/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
