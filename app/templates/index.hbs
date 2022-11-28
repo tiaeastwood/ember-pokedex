@@ -1,7 +1,5 @@
-<h1>Hello, world!</h1>
-
-<ul>
-      {{#each @model as |pokemon|}}
-        <li>{{pokemon.name}}</li>
-      {{/each}}
-</ul>
+<div class='pokemon-list'>
+  {{#each @model as |pokemon|}}
+    <Pokemon @pokemon={{pokemon}} />
+  {{/each}}
+</div>
