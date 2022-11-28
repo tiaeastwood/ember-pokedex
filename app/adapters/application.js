@@ -2,13 +2,13 @@ import JSONAPIAdapter from '@ember-data/adapter/json-api';
 import RESTAdapter from '@ember-data/adapter/rest';
 
 export default class ApplicationAdapter extends JSONAPIAdapter {
-  host = 'https://pokeapi.co';
-  namespace = 'api/v2/pokemon';
+  // host = 'https://pokeapi.co';
+  // namespace = 'api/v2/pokemon';
 
-  buildURL(...args) {
-    //return `${super.buildURL(...args)}`;
-    return this.host + '/' + this.namespace;
-  }
+  // buildURL(...args) {
+  //   //return `${super.buildURL(...args)}`;
+  //   return this.host + '/' + this.namespace;
+  // }
 }
 
 // The adapter builds the correct url that we need to request for our api

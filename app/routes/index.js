@@ -1,10 +1,12 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
 
 export default class IndexRoute extends Route {
-  @service store;
-
   async model() {
-    return this.store.findAll('pokemon');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon');
+    const pokes = await response.json();
+
+    const data = pokes.results;
+
+    return data;
   }
 }
