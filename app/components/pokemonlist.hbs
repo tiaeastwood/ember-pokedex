@@ -1,0 +1,10 @@
+<div class="pokemon-list">
+  <ul class="results">
+
+    <Pokemonlist @pokemonlist={{@pokemonlist}} as |results|>
+      {{#each results as |pokemon|}}
+        <li><Pokemon @pokemon={{pokemon}} /></li>
+      {{/each}}
+    </Pokemonlist>
+  </ul>
+</div>
