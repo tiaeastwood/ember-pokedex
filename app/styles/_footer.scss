@@ -7,10 +7,14 @@
     position: fixed;
     bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
     p {
         color: white;
         margin: 0.5rem 0;
+        font-size: 0.75rem;
+    }
+    a {
+        color: white;
     }
 }
