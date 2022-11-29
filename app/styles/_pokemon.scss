@@ -1,13 +1,13 @@
 @import 'colours.scss';
 
 .pokemon-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-top: 8rem;
 
   .pokemon-card {
-    width: 20%;
-    min-width: 200px;
+    width: auto;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,11 @@
     padding: 1rem;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     margin: 1rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: rotate(3deg);
+    }
 
     .thumbnail-image {
       width: 150px;
@@ -62,3 +67,24 @@
     padding: 0rem 2rem;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  .pokemon-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    .pokemon-card {
+      height: 150px;
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 800px) {
+  .pokemon-list {
+    grid-template-columns: repeat(3, 1fr);
+
+    .pokemon-card {
+      height: 175px;
+    }
+  }
+}
+
