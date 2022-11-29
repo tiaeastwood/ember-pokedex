@@ -8,7 +8,7 @@
   .pokemon-card {
     width: 20%;
     min-width: 200px;
-    height: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,17 +17,14 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     margin: 1rem;
 
-    h3 {
-      margin: 0;
+    .thumbnail-image {
+      width: 150px;
+      max-width: 90%;
     }
 
-    .card-button {
-      padding: 0.5rem;
-      color: white;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
-      background-color: $primary;
+    h3 {
+      margin: 0;
+      color: $black;
     }
   }
 }
@@ -38,7 +35,7 @@
   align-items: center;
 
   h2 {
-    margin: 0;
+    margin: 0 0 1rem 0;
     text-align: center;
   }
 
@@ -49,9 +46,14 @@
   .sprites {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     padding: 0rem 1rem;
     display: flex;
     justify-content: center;
+
+    .pokemon-sprite {
+      width: 75px;
+    }
   }
 
   .details {
