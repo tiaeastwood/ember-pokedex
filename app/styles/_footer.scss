@@ -1,0 +1,16 @@
+@import 'colours.scss';
+
+.footer {
+    width: 100%;
+    background-color: $primary;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+    p {
+        color: white;
+        margin: 0.5rem 0;
+    }
+}

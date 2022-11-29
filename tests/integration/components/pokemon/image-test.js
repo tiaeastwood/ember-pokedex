@@ -7,20 +7,19 @@ module('Integration | Component | pokemon/image', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    await render(
+      hbs`<Pokemon::Image src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png' alt='a picture of bulbasaur'/>`
+    );
 
-    await render(hbs`<Pokemon::Image />`);
-
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Pokemon::Image>
-        template block text
-      </Pokemon::Image>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert
+      .dom('img')
+      .exists()
+      .hasAttribute(
+        'src',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
+      )
+      .hasAttribute('alt', 'a picture of bulbasaur');
   });
 });
+
+

@@ -1,10 +1,10 @@
- <LinkTo @route='pokemon' @model={{@pokemon}}>
-<div class='pokemon-card'>
-  <Pokemon::Image
-    src={{@pokemon.sprites.other.official-artwork.front_default}}
-    alt="A picture of {{@pokemon.name}}"
-    class="thumbnail-image"
-  />
-  <h3>{{@pokemon.name}}</h3>
-</div>
+<LinkTo @route='pokemon' @model={{@pokemon}}>
+  <div class='pokemon-card'>
+    <Pokemon::Image
+      src={{@pokemon.sprites.other.official-artwork.front_default}}
+      alt='A picture of {{@pokemon.name}}'
+      class='thumbnail-image'
+    />
+    <h3>{{@pokemon.name}}</h3>
+  </div>
 </LinkTo>

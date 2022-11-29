@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
-  margin-top: 8rem;
+  margin: 8rem 0 6rem 0;
 
   .pokemon-card {
     width: auto;
@@ -35,6 +35,7 @@
 }
 
 .pokemon-detailed {
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
