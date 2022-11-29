@@ -1,3 +1,12 @@
 <div class='pokemon-card'>
+  {{!-- <Pokemon::Image
+    src={{@pokemon.sprites.other.official-artwork}}
+    alt="A picture of {{@pokemon.name}}"
+  /> --}}
   <h3>{{@pokemon.name}}</h3>
+
+  <LinkTo @route='pokemon' @model={{@pokemon}} class='card-button'>
+    View Details
+  </LinkTo>
+
 </div>

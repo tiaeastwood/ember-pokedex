@@ -1,10 +1,110 @@
-<article class="pokemon detailed">
-  {{!-- <Rental::Image
-    src={{@rental.image}}
-    alt="A picture of {{@rental.title}}"
-  /> --}}
+<article class='pokemon-detailed'>
+  <Pokemon::Image
+    src={{@pokemon.sprites.other.official-artwork.front_default}}
+    alt='A picture of {{@pokemon.name}}'
+    class='pokemon-image'
+  />
 
-  <div class="details">
-    <h3>{{@pokemon.name}}</h3>
-</div>
+  <div class='details'>
+    <h2>
+      {{@pokemon.name}}
+    </h2>
+
+    <div class='sprites'>
+      {{! These if statements are conditional rendering: if the data is null then the image won't render  }}
+      {{#if @pokemon.sprites.front_default}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.front_default}}
+          alt='A sprite of {{@pokemon.name}} - front_default'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.front_female}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.front_female}}
+          alt='A sprite of {{@pokemon.name}} - front_female'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.back_default}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.back_default}}
+          alt='A sprite of {{@pokemon.name}} - back default'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.back_female}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.back_female}}
+          alt='A sprite of {{@pokemon.name}} - back female'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.front_shiny}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.front_shiny}}
+          alt='A sprite of {{@pokemon.name}} - front_shiny'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.back_shiny}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.back_shiny}}
+          alt='A sprite of {{@pokemon.name}} - back_shiny'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.front_shiny_female}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.front_shiny_female}}
+          alt='A sprite of {{@pokemon.name}} - front_shiny_female'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+
+      {{#if @pokemon.sprites.back_shiny_female}}
+        <Pokemon::Image
+          src={{@pokemon.sprites.back_shiny_female}}
+          alt='A sprite of {{@pokemon.name}} - back_shiny_female
+'
+          class='pokemon-sprite'
+        />
+      {{/if}}
+    </div>
+
+    <div class='details'>
+      <p><span class='bold'>Pokedex No:</span> {{@pokemon.order}}</p>
+      <p><span class='bold'>Height:</span> {{@pokemon.height}}</p>
+      <p><span class='bold'>Weight:</span> {{@pokemon.weight}}</p>
+      <p><span class='bold'>Base Experience:</span>
+        {{@pokemon.base_experience}}</p>
+
+      <span class='bold'>Types:</span>
+      <ul>
+        {{#each @pokemon.types as |type|}}
+          <li>{{type.type.name}}</li>
+        {{/each}}
+      </ul>
+
+      <span class='bold'>Abilities:</span>
+      <ul>
+        {{#each @pokemon.abilities as |ability|}}
+          <li>{{ability.ability.name}}</li>
+        {{/each}}
+      </ul>
+
+      <span class='bold'>Moves:</span>
+      <ul>
+        {{#each @pokemon.moves as |move|}}
+          <li>{{move.move.name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </article>

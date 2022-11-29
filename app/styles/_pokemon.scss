@@ -1,16 +1,62 @@
+@import 'colours.scss';
+
 .pokemon-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center ;
+  justify-content: center;
 
   .pokemon-card {
     width: 20%;
     min-width: 200px;
-    height: 300px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     margin: 1rem;
+
+    h3 {
+      margin: 0;
+    }
+
+    .card-button {
+      padding: 0.5rem;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      background-color: $primary;
+    }
+  }
+}
+
+.pokemon-detailed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .pokemon-image {
+    width: 300px;
+  }
+
+  .sprites {
+    width: 100%;
+    display: flex;
+    padding: 0rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details {
+    width: 100%;
+    text-align: left;
+    padding: 0rem 2rem;
   }
 }

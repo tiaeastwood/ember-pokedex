@@ -1,15 +1,22 @@
-header {
-    width: 100%;
-    height: auto;
-    background-color: rgb(169, 0, 34);
+@import 'colours.scss';
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: $primary;
+  color: white;
+  padding: 1rem 2rem;
+
+  h1 {
+    margin: 0;
     color: white;
-    padding: 1rem;
+  }
 
-    h1 {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    p {
-        margin: 0;
-    }
+  a {
+    color: white;
+  }
 }
