@@ -1,6 +1,6 @@
 <LinkTo @route='pokemon' @model={{@pokemon}}>
   <div class='pokemon-card'>
-     <h3>#{{@pokemon.order}}</h3>
+     <h3>#{{@pokemon.id}}</h3>
     <Pokemon::Image
       src={{@pokemon.sprites.other.official-artwork.front_default}}
       alt='A picture of {{@pokemon.name}}'
